@@ -4,13 +4,14 @@ using System.Text.Json.Serialization;
 using System.Text.Json;
 using Refit;
 using ProblemDetails = Microsoft.AspNetCore.Mvc.ProblemDetails;
+using MediatR;
 
 
 namespace Shared
 {
-    //public interface IRequestByServiceResult<T> : IRequest<ServiceResult<T>>;
+    public interface IRequestByServiceResult<T> : IRequest<ServiceResult<T>>;
 
-    //public interface IRequestByServiceResult : IRequest<ServiceResult>;
+    public interface IRequestByServiceResult : IRequest<ServiceResult>;
 
 
     public class ServiceResult
